@@ -7,8 +7,8 @@ logging:
     com.atsistemas: debug
 
 gogs:
-  host: 172.17.0.3
-  port: 3000
+  host: localhost
+  port: 10080
   contextPath: /api/v1/repos/migrate
   user: dani
   passwd: 1234

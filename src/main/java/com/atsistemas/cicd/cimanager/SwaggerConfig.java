@@ -21,7 +21,7 @@ class SwaggerConfig {
 	 * @return Swagger Docket
 	 */
 	@Bean
-	public Docket cimanagerApi() {
+	public Docket ciManagerApi() {
 
 		return new Docket(DocumentationType.SWAGGER_2).select()
 

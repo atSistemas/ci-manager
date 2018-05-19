@@ -22,8 +22,6 @@ WORKDIR /app
 
 USER springboot
 
-
-
-ONBUILD COPY spring-boot.jar /app/spring-boot.jar
+COPY spring-boot.jar /app/spring-boot.jar
 
 ENTRYPOINT ["./entrypoint.sh"]

@@ -1,37 +1,47 @@
 swagger: '2.0'
 info:
-  version: 0.1-SNAPSHOT
-  title: cimanager
-
-basePath: /cimanager
+  version: '0.1-SNAPSHOT'
+  title: 'ci-manager'
+  description: 'ci-manager API'
 produces:
   - application/json  
 paths:
-  '/ping':
-    get:
-      parameters:
-      - name: message
-        in: query
-        description: message
-        type: string
-        required: false
-      responses:
-        200:
-          description: Response from server
+  '/projects':
+    post:
+      parameters: 
+        - name: createProjectRequest
+          in: body
+          required: true
           schema:
-            $ref: '#/definitions/PingResponse'
+            $ref: '#/definitions/CreateProjectRequest'
+      responses:
+        201:
+          description: Project created
+          schema:
+            $ref: '#/definitions/Project'
         404:
           description: Not found
         500:
           description: Internal server error
       
 definitions:
-  PingResponse:
+  CreateProjectRequest:
+    type: object
+    properties:
+      projectName:
+        type: string
+      repoUrl:
+        type: string
+    required:
+      - projectName
+      - repoUrl
+     
+  Project:
     type: object
     required:
       - id
     properties:
       id:
         type: string
-      responseMessage:
+      name:
         type: string

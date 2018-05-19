@@ -167,6 +167,7 @@
 						</goals>
 						<configuration>
 							<inputSpec>${project.build.sourceDirectory}/../resources/${project.artifactId}-api.yml</inputSpec>
+<!-- 							<inputSpec>https://app.swaggerhub.com/apiproxy/schema/file/nullp0int3r/ic-manager/0.1-SNAPSHOT/swagger.json</inputSpec> -->
 
 							<language>spring</language>
 							<modelPackage>com.atsistemas.cicd.${project.artifactId}.generated.model</modelPackage>
