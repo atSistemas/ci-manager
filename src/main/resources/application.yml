@@ -5,9 +5,15 @@ logging:
   level:
     org.springframework.web: info
     com.atsistemas: debug
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 gogs:
-  host: 172.17.0.3
+  host: ${GOGS_HOST}
   port: 3000
   contextPath: /api/v1/repos/migrate
   user: dani
