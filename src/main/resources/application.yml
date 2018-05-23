@@ -13,9 +13,7 @@ management:
         include: "*"
 
 gogs:
-  host: ${GOGS_HOST}
-  port: 3000
-  contextPath: /api/v1/repos/migrate
-  user: dani
-  passwd: 1234
-  migrateUrl: 'http://${gogs.host}:${gogs.port}${gogs.contextPath}'
+  user: ${GOGS_USER}
+  passwd: ${GOGS_PASSWD}
+  migrateContextPath: /api/v1/repos/migrate
+  migrateUrl: 'http://${GOGS_SERVICE_HOST}:${GOGS_SERVICE_PORT}${gogs.migrateContextPath}'
