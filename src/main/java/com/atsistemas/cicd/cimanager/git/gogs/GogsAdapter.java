@@ -1,4 +1,4 @@
-package com.atsistemas.cicd.cimanager.git.service.gogs;
+package com.atsistemas.cicd.cimanager.git.gogs;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,16 +8,16 @@ import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.atsistemas.cicd.cimanager.git.service.GitService;
-import com.atsistemas.cicd.cimanager.git.service.GitServiceException;
-import com.atsistemas.cicd.cimanager.git.service.gogs.model.MigrateRequest;
-import com.atsistemas.cicd.cimanager.git.service.gogs.model.MigrateResponse;
+import com.atsistemas.cicd.cimanager.git.GitService;
+import com.atsistemas.cicd.cimanager.git.GitServiceException;
+import com.atsistemas.cicd.cimanager.git.gogs.model.MigrateRequest;
+import com.atsistemas.cicd.cimanager.git.gogs.model.MigrateResponse;
 
 
 @Service("gitService")
-public class GitServiceGogsAdapter implements GitService {
+public class GogsAdapter implements GitService {
 	
-	private Logger logger = LoggerFactory.getLogger(GitServiceGogsAdapter.class);
+	private Logger logger = LoggerFactory.getLogger(GogsAdapter.class);
 
 	@Value("${gogs.migrateUrl}")
 	private String migrateUrl;

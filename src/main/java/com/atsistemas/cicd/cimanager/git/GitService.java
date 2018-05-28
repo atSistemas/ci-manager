@@ -1,4 +1,4 @@
-package com.atsistemas.cicd.cimanager.git.service;
+package com.atsistemas.cicd.cimanager.git;
 
 public interface GitService {
 	

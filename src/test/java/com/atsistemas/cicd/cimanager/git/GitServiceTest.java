@@ -1,4 +1,4 @@
-package com.atsistemas.cicd.cimanager.git.service;
+package com.atsistemas.cicd.cimanager.git;
 
 import static org.junit.Assert.*;
 
@@ -8,12 +8,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.atsistemas.cicd.cimanager.git.GitService;
+import com.atsistemas.cicd.cimanager.git.GitServiceException;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@TestPropertySource(locations="application-test-yml")
+@TestPropertySource(locations="classpath:application-test.yml")
+@ActiveProfiles("test")
 public class GitServiceTest {
 	
 	private Logger logger = LoggerFactory.getLogger(GitServiceTest.class);

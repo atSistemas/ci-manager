@@ -17,3 +17,8 @@ gogs:
   passwd: ${GOGS_PASSWD}
   migrateContextPath: /api/v1/repos/migrate
   migrateUrl: 'http://${GOGS_SERVICE_HOST}:${GOGS_SERVICE_PORT}${gogs.migrateContextPath}'
+  
+openshift:
+  url: 'https://localhost:8443'
+  user: developer
+  passwd: any

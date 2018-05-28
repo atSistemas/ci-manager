@@ -7,9 +7,12 @@ logging:
     com.atsistemas: debug
 
 gogs:
-  host: localhost
-  port: 10080
-  contextPath: /api/v1/repos/migrate
-  user: dani
-  passwd: 1234
-  migrateUrl: 'http://${gogs.host}:${gogs.port}${gogs.contextPath}'
+  user: gogs
+  passwd: gogs
+  migrateContextPath: /api/v1/repos/migrate
+  migrateUrl: 'http://gogs.cicd.svc:3000${gogs.migrateContextPath}'
+  
+openshift:
+  url: 'https://localhost:8443'
+  user: developer
+  passwd: any

@@ -1,4 +1,4 @@
-package com.atsistemas.cicd.cimanager.git.service.gogs.model;
+package com.atsistemas.cicd.cimanager.git.gogs.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
