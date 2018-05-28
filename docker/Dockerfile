@@ -4,12 +4,13 @@ FROM anapsix/alpine-java
 
 COPY assets/entrypoint.sh /app/entrypoint.sh
 
-RUN apk --no-cache add curl tzdata
+
 RUN addgroup -S springboot && \
 	adduser -S -g springboot springboot && \
  	chmod 555 /app/entrypoint.sh
-RUN cp /usr/share/zoneinfo/Europe/Madrid /etc/localtime && \
-	echo "Europe/Madrid" >  /etc/timezone
+#RUN apk --no-cache add curl tzdata 	
+#RUN cp /usr/share/zoneinfo/Europe/Madrid /etc/localtime && \
+#	echo "Europe/Madrid" >  /etc/timezone
 
 # service port
 EXPOSE 8080

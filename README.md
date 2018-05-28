@@ -1,1 +1,1 @@
-# ic-manager
+# ci-manager

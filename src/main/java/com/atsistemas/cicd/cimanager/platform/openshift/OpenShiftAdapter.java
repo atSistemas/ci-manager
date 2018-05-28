@@ -33,7 +33,7 @@ public class OpenShiftAdapter implements PlatformService {
 			throw new PlatformServiceException("Caused by ResourceFactoryException",e);
 		}
 		IResource request = openshiftClient.getResourceFactory().stub(ResourceKind.TEMPLATE, resource);
-		openshiftClient.create(request,"cicd");
+		openshiftClient.create(request,"dev");
 		
 	}
 

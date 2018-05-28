@@ -12,11 +12,12 @@ management:
       exposure:
         include: "*"
 
+  
 gogs:
-  user: ${GOGS_USER}
-  passwd: ${GOGS_PASSWD}
+  user: ${GOGS_USER:gogs}
+  passwd: ${GOGS_PASSWD:gogs}
   migrateContextPath: /api/v1/repos/migrate
-  migrateUrl: 'http://${GOGS_SERVICE_HOST}:${GOGS_SERVICE_PORT}${gogs.migrateContextPath}'
+  migrateUrl: 'http://${GOGS_SERVICE_HOST:localhost}:${GOGS_SERVICE_PORT:3000}${gogs.migrateContextPath}'
   
 openshift:
   url: 'https://localhost:8443'

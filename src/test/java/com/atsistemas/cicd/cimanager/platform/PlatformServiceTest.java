@@ -35,7 +35,7 @@ public class PlatformServiceTest {
 	@Test
 	public void testCreateApplication() {
 		
-		String applicationName = "ci-manager";
+		String applicationName = "polaris";
 		
 		try {
 			platformService.createApplication(applicationName);

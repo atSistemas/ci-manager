@@ -6,6 +6,6 @@ public class TemplateResolver {
 		
 		
 		//TODO
-		return "application-template.yaml";
+		return "polarisOpenShift.yaml";
 	}
 }
